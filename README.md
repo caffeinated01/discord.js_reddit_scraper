@@ -2,7 +2,7 @@
 A basic reddit command for discord bots.\
 Works with my command handler!
 # My Command handler:
-  [Command Handler][template]
+  [discord.js template][template]
 # Socials:
   [Twitch][twitch]\
   [Discord][discord]
