@@ -1,22 +1,18 @@
-const Discord = require("discord.js");
-const fetch = require("node-fetch")
-const got = require("got")
-const https = require('https');
-/*const subreddit = [ "https://www.reddit.com/r/Animemes/random/.json","https://www.reddit.com/r/MemesOfAnime/random/.json"]
-const url = subreddit[Math.floor(Math.random() * subreddit.length)];*/
 module.exports = {
 	name: 'reddit',
 	aliases: ['r'],
 	category: 'scrapers',
 	utilisation: 'reddit',
 	desc: "reddit scraper",
-	execute(bot, messageCreate, args) {
-		let subreddit = "subreddit here lol" //etc. unixporn
+	async execute(bot, messageCreate, args) {
+        const got = await import("got")
+        const Discord = await import("discord.js")
+		let subreddit = "unixporn" //etc. unixporn
 		//res => response, req => request
 		//example array: let reddit = ["example-1", "example-2"]
 		//random selection if you have multiple, picks from array:  let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
 		const embed = new Discord.MessageEmbed();
-		got(`https://www.reddit.com/r/${subreddit}/random/.json`)
+		got.default(`https://www.reddit.com/r/${subreddit}/random/.json`)
 			.then(response => {
 				const [list] = JSON.parse(response.body); //response to json
 				const [post] = list.data.children; //listing the data
@@ -37,4 +33,3 @@ module.exports = {
 			.catch(console.error);
 	}
 }
-
