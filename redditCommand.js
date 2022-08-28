@@ -7,7 +7,7 @@ module.exports = {
 	async execute(bot, messageCreate, args) {
         const got = await import("got")
         const Discord = await import("discord.js")
-		let subreddit = "unixporn" //etc. unixporn
+		let subreddit = "subreddit here" //etc. unixporn
 		//res => response, req => request
 		//example array: let reddit = ["example-1", "example-2"]
 		//random selection if you have multiple, picks from array:  let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
