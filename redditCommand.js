@@ -1,3 +1,5 @@
+const Discord = require("discord.js")
+
 module.exports = {
 	name: 'reddit',
 	aliases: ['r'],
@@ -6,7 +8,6 @@ module.exports = {
 	desc: "reddit scraper",
 	async execute(bot, messageCreate, args) {
         const got = await import("got")
-        const Discord = await import("discord.js")
 		let subreddit = "subreddit here" //etc. unixporn
 		//res => response, req => request
 		//example array: let reddit = ["example-1", "example-2"]
